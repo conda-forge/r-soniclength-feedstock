@@ -1,4 +1,4 @@
-{% set version = '1.4.4' %}
+{% set version = '1.4.6' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sonicLength_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sonicLength/sonicLength_{{ version }}.tar.gz
-  sha256: 35825e67f44e12da8c8423295a520cff422af6ea06671f97d0bd7739faef86ec
+  sha256: 62245e2310ecdd8bbe3c7bf51d185b1a31760e31f06ac698ead82904d2fc094a
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,7 +22,7 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
   run:
@@ -61,18 +60,13 @@ about:
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
 
 # Package: sonicLength
 # Type: Package
-# Title: Estimating Abundance of Clones from DNA fragmentation data
-# Version: 1.4.4
-# Date: 2014-08-23
+# Title: Estimating Abundance of Clones from DNA Fragmentation Data
+# Version: 1.4.6
+# Date: 2019-03-04
 # Author: Charles Berry <ccberry@ucsd.edu>
 # Maintainer: Charles Berry <ccberry@ucsd.edu>
 # Depends: R (>= 2.14.0), splines
@@ -81,8 +75,8 @@ extra:
 # LazyLoad: yes
 # Repository: CRAN
 # Repository/R-Forge/Project: soniclength
-# Repository/R-Forge/Revision: 8
-# Repository/R-Forge/DateTimeStamp: 2014-08-23 15:50:30
-# Date/Publication: 2014-08-24 10:56:28
-# Packaged: 2014-08-24 08:55:47 UTC; hornik
+# Repository/R-Forge/Revision: 11
+# Repository/R-Forge/DateTimeStamp: 2019-03-04 20:08:39
+# Date/Publication: 2019-03-05 17:30:03 UTC
 # NeedsCompilation: no
+# Packaged: 2019-03-04 20:30:20 UTC; rforge
