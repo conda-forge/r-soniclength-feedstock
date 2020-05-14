@@ -3,7 +3,7 @@ About r-soniclength
 
 Home: https://CRAN.R-project.org/package=sonicLength
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: BSD 3-Clause
 

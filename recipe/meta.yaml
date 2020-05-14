@@ -35,7 +35,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=sonicLength
-  license: GPL (>= 2)
+  license: GPL-2.0-or-later
   summary: Estimate the abundance of cell clones from the distribution of lengths of DNA fragments
     (as created by sonication, whence `sonicLength').  The algorithm in "Estimating
     abundances of retroviral insertion sites from DNA fragment length data" by Berry
